@@ -8,14 +8,14 @@ import { BackToTopButton } from "../components/BackToTopButton/BackToTopButton";
 import { useEffect, useState } from "react";
 
 const App = () => {
-  const [filters, setFilters] = useState([]);
+  const [filters, setFilters] = useState<any[]>([]);
   const [data, setData] = useState<any>([]);
 
   useEffect(() => setData(db));
 
-  useEffect(() => {
+  /* useEffect(() => {
     JOBS.onScrollElements();
-  }, []);
+  }, []); */
 
   const isFiltersIncluded = (el: string | any[], value: any) => {
     return el.includes(value);
@@ -44,7 +44,7 @@ const App = () => {
         />
       )}
       <CardList data={data} filters={filters} filterBy={filterBy} />
-      <BackToTopButton scrollToTop={JOBS.scrollToTop} />
+      {/* <BackToTopButton scrollToTop={JOBS.scrollToTop} /> */}
     </>
   );
 };
