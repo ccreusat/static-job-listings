@@ -1,4 +1,4 @@
-const JOBS = {
+/* const JOBS = {
   scrollToTop() {
     return window.scrollTo({ top: 0, behavior: "smooth" });
   },
@@ -32,5 +32,6 @@ const JOBS = {
       }
     });
   },
-};
+}; */
+const JOBS = {};
 export default JOBS;
